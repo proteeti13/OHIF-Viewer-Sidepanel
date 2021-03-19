@@ -35,16 +35,16 @@ const Router = JSON.parse(process.env.USE_HASH_ROUTER)
 let commandsManager, extensionManager, servicesManager, hotkeysManager;
 
 function App({ config, defaultExtensions }) {
-  // const init = appInit(config, defaultExtensions);
+  const init = appInit(config, defaultExtensions);
 
-  // // Set above for named export
-  // commandsManager = init.commandsManager;
-  // extensionManager = init.extensionManager;
-  // servicesManager = init.servicesManager;
-  // hotkeysManager = init.hotkeysManager;
+  // Set above for named export
+  commandsManager = init.commandsManager;
+  extensionManager = init.extensionManager;
+  servicesManager = init.servicesManager;
+  hotkeysManager = init.hotkeysManager;
 
-  // // Set appConfig
-  // const appConfigState = init.appConfig;
+  // Set appConfig
+  const appConfigState = init.appConfig;
   const { routerBasename, modes, dataSources } = appConfigState;
   // Use config to create routes
   const appRoutes = createRoutes({
