@@ -33,10 +33,17 @@ class StudyBrowserContainer extends Component {
 // We wrap this component to create a simple/local example.
 const WrappedStudyBrowser = DndProvider(
   TouchBackend,
-  { enableMouseEvents: true },
-  null,
-  true
+  { enableMouseEvents: true },  //the wrapped component
+  null,   //retrieves the data   (datasource) => datasource.afunctionfromdatasource()
+  true    //
 )(StudyBrowserContainer);
 
 // http://react-dnd.github.io/react-dnd/docs/api/drag-drop-context
 export default { WrappedStudyBrowser };
+
+// export default WrappedStudyBrowser(DndProvider(
+//     TouchBackend,
+//     { enableMouseEvents: true },  //the wrapped component
+//     null,   //retrieves the data   (datasource) => datasource.afunctionfromdatasource()
+//     true    //
+//   ))(StudyBrowserContainer);
