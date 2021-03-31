@@ -180,51 +180,29 @@ function StudyBrowser(props) {
 
 const noop = () => {};
 
-// StudyBrowser.propTypes = {
-//   studies: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       StudyInstanceUID: PropTypes.string.isRequired,
-//       thumbnails: PropTypes.arrayOf(
-//         PropTypes.shape({
-//           altImageText: PropTypes.string,
-//           displaySetInstanceUID: PropTypes.string.isRequired,
-//           imageId: PropTypes.string,
-//           InstanceNumber: PropTypes.number,
-//           numImageFrames: PropTypes.number,
-//           SeriesDescription: PropTypes.string,
-//           SeriesNumber: PropTypes.number,
-//           stackPercentComplete: PropTypes.number,
-//         })
-//       ),
-//     })
-//   ).isRequired,
-//   supportsDrag: PropTypes.bool,
-//   onThumbnailClick: PropTypes.func,
-//   onThumbnailDoubleClick: PropTypes.func,
-// };
-
 StudyBrowser.propTypes = {
 	studies: PropTypes.arrayOf(
-		PropTypes.shape({
-			StudyInstanceUID: PropTypes.string,
-			thumbnails: PropTypes.arrayOf(
-				PropTypes.shape({
-					altImageText: PropTypes.string,
-					displaySetInstanceUID: PropTypes.string,
-					imageId: PropTypes.string,
-					InstanceNumber: PropTypes.number,
-					numImageFrames: PropTypes.number,
-					SeriesDescription: PropTypes.string,
-					SeriesNumber: PropTypes.number,
-					stackPercentComplete: PropTypes.number,
-				})
-			),
-		})
-	),
+	  PropTypes.shape({
+		StudyInstanceUID: PropTypes.string.isRequired,
+		thumbnails: PropTypes.arrayOf(
+		  PropTypes.shape({
+			altImageText: PropTypes.string,
+			displaySetInstanceUID: PropTypes.string.isRequired,
+			imageId: PropTypes.string,
+			InstanceNumber: PropTypes.number,
+			numImageFrames: PropTypes.number,
+			SeriesDescription: PropTypes.string,
+			SeriesNumber: PropTypes.number,
+			stackPercentComplete: PropTypes.number,
+		  })
+		),
+	  })
+	).isRequired,
 	supportsDrag: PropTypes.bool,
 	onThumbnailClick: PropTypes.func,
 	onThumbnailDoubleClick: PropTypes.func,
-};
+  };
+
 
 StudyBrowser.defaultProps = {
 	studies: [],
