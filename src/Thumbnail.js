@@ -179,7 +179,7 @@ function Thumbnail(props) {
 const noop = () => {};
 
 Thumbnail.propTypes = {
-  supportsDrag: PropTypes.bool,
+  // supportsDrag: PropTypes.bool,
   id: PropTypes.string.isRequired,
   displaySetInstanceUID: PropTypes.string.isRequired,
   StudyInstanceUID: PropTypes.string.isRequired,
@@ -205,7 +205,7 @@ Thumbnail.propTypes = {
 };
 
 Thumbnail.defaultProps = {
-  supportsDrag: false,
+  // supportsDrag: false,
   active: false,
   error: false,
   stackPercentComplete: 0,
