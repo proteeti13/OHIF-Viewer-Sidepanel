@@ -4,6 +4,7 @@ import { Thumbnail } from "./Thumbnail.js";
 import "./StudyBrowser.styl";
 
 function StudyBrowser(props) {
+	console.log("I am from studybrowser", props)
 	const {
 		// 	studies,
 		onThumbnailClick,
@@ -126,6 +127,7 @@ function StudyBrowser(props) {
 			<div className="scrollable-study-thumbnails">
 				{studies
 					.map((study, studyIndex) => {
+						// console.log("I AM FROM STUDY", study)
 						const { StudyInstanceUID } = study;
 						return study.thumbnails.map((thumb, thumbIndex) => {
 							// TODO: Thumb has more props than we care about?
@@ -139,6 +141,7 @@ function StudyBrowser(props) {
 								SeriesNumber,
 								stackPercentComplete,
 							} = thumb;
+							console.log("VARIABLES", thumb)
 
 							return (
 								<div
